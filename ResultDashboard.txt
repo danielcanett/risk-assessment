@@ -1,0 +1,14 @@
+import React from 'react';
+
+function ResultDashboard({ result }) {
+  if (!result) return null;
+  return (
+    <div style={{border: "1px solid #bbb", borderRadius: 8, padding: 16, marginBottom: 24}}>
+      <h2>Resultado de Consulta</h2>
+      <p><strong>Probabilidad:</strong> {result.probabilidad * 100}%</p>
+      <p><strong>Pérdida esperada:</strong> ${result.perdida_esperada.toLocaleString()}</p>
+    </div>
+  );
+}
+
+export default ResultDashboard;
